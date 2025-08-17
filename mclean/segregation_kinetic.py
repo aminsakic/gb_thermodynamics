@@ -29,8 +29,8 @@ def linear_heat_treatment(T0: float, t_tot: int, Tend: float, t: float):
     return T
 
 
-def hard_model(run_time: int, dt: float, accuracy: float, T0: float, Temb: float, R_G: float, diffusion: List[Tuple[float, float]],
-               x_bulk: np.ndarray, GB_thickness: float, E: np.ndarray, A: float, gb_conc: np.ndarray, mi: np.ndarray, lamda: np.ndarray):
+def kinetic_model(run_time: int, dt: float, accuracy: float, T0: float, Temb: float, R_G: float, diffusion: List[Tuple[float, float]],
+                  x_bulk: np.ndarray, GB_thickness: float, E: np.ndarray, A: float, gb_conc: np.ndarray, mi: np.ndarray, lamda: np.ndarray):
     """Links segregation energies calculated from atomistic simulations with non-equilibrium enrichment (kinetics) of solutes at GBs. 
        The code solves multi-component and multi-site systems. The formalism is taken from:
        D.Scheiber, T. Jechtl, J. Svoboda, F.D. Fischer, L. Romaner, On solute depletion zones along grain boundaries during segregation, 
